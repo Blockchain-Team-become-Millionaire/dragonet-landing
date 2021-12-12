@@ -1,0 +1,12 @@
+@mixin sectionBackground($bg, $z_index: -10, $position: center bottom) {
+    .section-background {
+        z-index: $z_index;
+
+        .section-background-cover {
+            &:before {
+                background-image: url($bg);
+                background-position: $position;
+            }
+        }
+    }
+}
