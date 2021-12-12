@@ -13,6 +13,10 @@
 html body {
   position: relative;
   font-family: Montserrat, sans-serif;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
 }
 html body h1,
 html body h2,
@@ -77,6 +81,7 @@ img {
   position: relative;
   overflow: hidden;
   padding: 30px 0;
+  scroll-snap-align: start;
 }
 .section .section-content {
   display: block;
@@ -176,7 +181,7 @@ header .header {
 }
 @media screen and (min-width: 1400px) {
   header .header {
-    padding: 0 5%;
+    padding: 0 2%;
   }
 }
 header .header:before {
@@ -222,19 +227,37 @@ header .header .header__logo .header__logo-wrapper {
 header .header .header__logo .header__logo-wrapper .logo {
   max-width: 262px;
   max-height: 111px;
+  margin-top: 20px;
 }
 header .header .header__nav ul {
-  height: 90px;
+  height: 76px;
+  margin-top: 21px;
 }
 @media screen and (min-width: 850px) and (max-width: 1900px) {
   header .header .header__nav ul {
     height: 60px;
+    margin-top: 16px;
   }
 }
 header .header .header__nav ul li a {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media (min-width: 1400px) {
+  header .header .header__nav ul li a {
+    padding: 0px 0.5rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  header .header .header__nav ul {
+    height: 40px;
+  }
+  header .header .header__nav ul li a {
+    padding: 0px 0.2rem;
+  }
 }
 header .header .header__right {
   height: 100%;
@@ -329,7 +352,7 @@ header .header .header__right .btn__market-place span {
     transition: max-height 0.15s ease-out;
   }
   header .header_mobile .header__nav-mobile.active {
-    padding: 25px 15px;
+    padding: 40px 15px 15px 20px;
     max-height: calc(100% - 45px);
     transition: max-height 0.25s ease-in;
   }
@@ -338,6 +361,7 @@ header .header .header__right .btn__market-place span {
   }
   header .header_mobile .header__nav-mobile ul li {
     width: 100%;
+    margin: 0.6rem 0;
   }
   header .header_mobile .header__nav-mobile ul li a {
     color: #fff;
@@ -405,6 +429,9 @@ main .section-board .dragon-board {
   main .section-board .dragon-board {
     padding-top: 180px;
     padding-bottom: 70px;
+  }
+  header .header .header__logo .header__logo-wrapper .logo {
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 850px) and (max-width: 1900px) {
