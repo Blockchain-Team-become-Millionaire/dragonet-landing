@@ -80,7 +80,7 @@ img {
 .section {
   position: relative;
   overflow: hidden;
-  padding: 30px 0;
+  padding: 30px 0 0 0;
   scroll-snap-align: start;
 }
 .section .section-content {
@@ -558,6 +558,14 @@ main .section-intro-game .intro-game .intro-game-board .gold-chest {
   width: 40%;
   z-index: 5;
 }
+
+@media screen and (max-width: 650px) {
+  main .section-intro-game .intro-game .intro-game-board .gold-chest {
+    left: 75px;
+    bottom: -12px;
+  }
+}
+
 main .section-intro-game .intro-game .intro-game-board .tiny-dragon {
   position: absolute;
   right: -160px;
