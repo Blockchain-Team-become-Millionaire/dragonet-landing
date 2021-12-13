@@ -199,7 +199,7 @@ header .header:before {
 }
 header .header:after {
   content: "";
-  background-image: url(../images/header-bg-shadow.png);
+  /* background-image: url(../images/header-bg-shadow.png); */
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% auto;
@@ -1551,3 +1551,24 @@ footer #absolute_footer .copyright {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.banner-content {
+  width: 60%;
+  transform: scale(0.8);
+  left: 5%;
+  bottom: 15%;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-content {
+    width: 80%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .banner-content {
+    width: 100%;
+    left: 0;
+  }
+}
