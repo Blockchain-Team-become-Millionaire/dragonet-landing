@@ -411,13 +411,24 @@ main .cloud.cloud-3:before {
   transform: translateY(-70%);
   background-image: url(../images/cloud-3.png);
 }
+
+main .section-board {
+  padding: 0;
+}
+#background-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
 main .section-board .section-background {
   z-index: -10;
 }
-main .section-board .section-background .section-background-cover:before {
+/* main .section-board .section-background .section-background-cover:before {
   background-image: url("../images/back-1.png");
   background-position: center bottom;
-}
+} */
 main .section-board .dark-flash {
   position: absolute;
   top: 0;
@@ -433,6 +444,7 @@ main .section-board .light-flash {
 main .section-board .dragon-board {
   padding-top: 250px;
   padding-bottom: 70px;
+  height: 100%;
 }
 @media screen and (max-width: 850px) {
   main .section-board .dragon-board {

@@ -107,7 +107,7 @@
                 <a href="/" class="text-decoration-none">Home</a>
               </li>
               <li>
-                <a href="#about" offset="100" class="text-decoration-none"
+                <a href="#about" offset="150" class="text-decoration-none"
                   >About</a
                 >
               </li>
@@ -253,17 +253,36 @@
     <main>
       <div class="section section-board">
         <div class="section-content">
-          <div class="dark-flash">
+          <video id="background-video" autoplay muted loop>
+            <source
+              id="mp4-video"
+              src="assets/video/dragonet-lg.mp4"
+              type="video/mp4"
+            />
+
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- <div class="dark-flash">
             <img src="assets/images/dark-flash.png" alt="" />
           </div>
           <div class="light-flash">
             <img src="assets/images/light-flash.png" alt="" />
-          </div>
-          <div class="container">
+          </div> -->
+          <div
+            class="
+              container-fluid
+              position-absolute
+              top-0
+              right-0
+              left-0
+              bottom-0
+            "
+          >
             <div
               class="dragon-board row align-items-center justify-content-center"
             >
-              <div
+              <!-- <div
                 class="
                   col-6 col-sm-6 col-md-6 col-lg-5
                   text-center
@@ -278,7 +297,7 @@
                 </div>
 
                 <img src="assets/images/board.png" alt="" />
-              </div>
+              </div> -->
               <div class="clearfix"></div>
               <div
                 class="
@@ -1128,18 +1147,57 @@
 
     <script src="assets/js/main.js"></script>
     <script type="text/javascript">
-      $(document).on("click", 'a[href^="#"]', function (event) {
-        event.preventDefault();
+      var linkVideo = "assets/video/dragonet-lg.mp4";
+      var lastVideo = "assets/video/dragonet-lg.mp4";
+      $(document).ready(function () {
+        if (window.attachEvent) {
+          window.attachEvent("onresize", function () {
+            console.log("attachEvent - resize");
+            handleWindowResize();
+          });
+        } else if (window.addEventListener) {
+          window.addEventListener(
+            "resize",
+            function () {
+              console.log("addEventListener - resize");
+              handleWindowResize();
+            },
+            true
+          );
+        } else {
+          //The browser does not support Javascript event binding
+        }
 
-        $("html, body").animate(
-          {
-            scrollTop:
-              $($.attr(this, "href")).offset().top +
-              (Number($(this).attr("offset")) || 0),
-          },
-          500
-        );
+        $(document).on("click", 'a[href^="#"]', function (event) {
+          event.preventDefault();
+
+          $("html, body").animate(
+            {
+              scrollTop:
+                $($.attr(this, "href")).offset().top +
+                (Number($(this).attr("offset")) || 0),
+            },
+            500
+          );
+        });
       });
+
+      function handleWindowResize() {
+        var video = document.getElementById("background-video");
+        var srcVideo = document.getElementById("mp4-video");
+
+        if (window.innerWidth <= 800) {
+          lastVideo = "assets/video/dragonet-mb.mp4";
+        } else {
+          lastVideo = "assets/video/dragonet-lg.mp4";
+        }
+        if (linkVideo != lastVideo) {
+          linkVideo = lastVideo;
+          video.pause();
+          srcVideo.setAttribute("src", lastVideo);
+          video.load();
+        }
+      }
     </script>
   </body>
 </html>
