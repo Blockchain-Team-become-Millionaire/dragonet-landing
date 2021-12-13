@@ -506,6 +506,17 @@ main .section-board .dragon-board .dragon-light {
 main .section-intro-game {
   margin-top: -140px;
 }
+
+main .dragon-head {
+  z-index: 5;
+  max-width: 180px;
+}
+
+@media screen and (max-width: 1900px) {
+  main .dragon-head {
+    max-width: 111px;
+  }
+}
 main .section-intro-game .section-background {
   z-index: -11;
 }
@@ -535,6 +546,7 @@ main .section-intro-game .intro-game .intro-game-board .tiny-dragon {
   transform: translate(50%, 20%);
   width: 25%;
   z-index: 5;
+  /* margin-right: -150px; */
 }
 main .section-intro-game .intro-game .intro-game-board .intro-game-content {
   position: absolute;
@@ -644,6 +656,14 @@ main .section-dragon-slider .dragon-slider {
 }
 main .section-dragon-slider .dragon-slider .owl-carousel .owl-item {
   margin: 15px 0;
+  cursor: pointer;
+}
+
+#dragon-image {
+  max-width: 270px;
+  max-height: 270px;
+  width: 270px;
+  height: 270px;
 }
 main .section-dragon-slider .dragon-slider .dragon-item {
   padding: 15px;
