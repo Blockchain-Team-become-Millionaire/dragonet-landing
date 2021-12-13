@@ -157,6 +157,7 @@ img {
   left: -16px;
   right: -16px;
   transform: translateY(-50%);
+  pointer-events: none;
 }
 .owl-carousel .owl-nav .owl-prev,
 .owl-carousel .owl-nav .owl-next {
@@ -166,6 +167,7 @@ img {
   border-radius: 50%;
   background: #fbfd9f !important;
   box-shadow: 0 0 12px #ffb400;
+  pointer-events: all;
 }
 .btn-custom {
   background-image: url(../images/button.png);
