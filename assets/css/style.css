@@ -278,6 +278,10 @@ img {
 }
 
 /* ============================================== */
+#header {
+  padding: 0;
+}
+
 header {
   position: absolute;
   width: 100%;
