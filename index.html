@@ -70,8 +70,8 @@
   </head>
 
   <body>
-    <header id="header">
-      <div class="container d-flex justify-content-center">
+    <header>
+      <div class="container d-flex justify-content-center" id="header">
         <div
           class="
             header
@@ -1310,13 +1310,12 @@
         });
 
         $(".scroll-control-item").on("click", function () {
+          console.log($(this).attr("section"));
           $(".scroll-control-item").removeClass("active");
           $(this).addClass("active");
           if ($(this).attr("section") == "header") {
-            document.getElementById("header").scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; //
           } else {
             const scrollTo = $(this).attr("section");
             document.getElementById(scrollTo).scrollIntoView({
