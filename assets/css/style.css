@@ -289,6 +289,10 @@ header {
   left: 0;
   right: 0;
 }
+
+header .section {
+  padding: 0;
+}
 header .header {
   position: fixed;
   height: 100px;

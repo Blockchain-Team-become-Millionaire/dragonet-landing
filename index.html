@@ -70,7 +70,7 @@
   </head>
 
   <body>
-    <header class="section" id="header">
+    <header id="header">
       <div class="container d-flex justify-content-center">
         <div
           class="
@@ -1245,6 +1245,7 @@
       $(document).ready(function () {
         //AOS
         AOS.init();
+        handleWindowResize();
 
         // var roadmap = document.getElementById("xxx", {
         //   hoverOnly: true,
@@ -1311,11 +1312,18 @@
         $(".scroll-control-item").on("click", function () {
           $(".scroll-control-item").removeClass("active");
           $(this).addClass("active");
-          const scrollTo = $(this).attr("section");
-          document.getElementById(scrollTo).scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-          });
+          if ($(this).attr("section") == "header") {
+            document.getElementById("header").scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          } else {
+            const scrollTo = $(this).attr("section");
+            document.getElementById(scrollTo).scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
         });
 
         const sections = document.getElementsByClassName("section");
