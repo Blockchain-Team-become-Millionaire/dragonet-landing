@@ -1441,6 +1441,7 @@ main
   line-height: 40px;
   text-align: center;
   color: #fbfd9f;
+  white-space: nowrap;
 }
 @media screen and (max-width: 500px) {
   main
