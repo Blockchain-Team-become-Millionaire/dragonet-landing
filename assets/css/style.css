@@ -127,6 +127,7 @@ img {
   border-radius: 20px;
   padding: 0px;
   overflow: hidden;
+  list-style: none;
 }
 .dropdown .dropdown-content li {
   border-bottom: 1px solid transparent;
