@@ -110,6 +110,82 @@ img {
   }
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(45, 68, 88, 0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: #fff;
+  margin: 0px;
+  border-radius: 20px;
+  padding: 0px;
+  overflow: hidden;
+}
+.dropdown .dropdown-content li {
+  border-bottom: 1px solid transparent;
+}
+
+.dropdown .dropdown-content > li > a {
+  color: rgb(255, 255, 255);
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
+  background: rgba(45, 68, 88, 0.9);
+  padding: 10px 26px !important;
+}
+
+.dropdown > a.docs {
+  text-decoration: none;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown > a.docs img {
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+}
+
+.dropdown .dropdown-content li a:hover {
+  background: radial-gradient(50% 50% at 50% 50%, #c06c65 0%, #75332e 100%);
+  color: #fbfd9f;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown .dropdown-content {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+  }
+  .dropdown .dropdown-content li a:hover {
+    background: transparent;
+  }
+
+  .dropdown .dropdown-content > li > a {
+    background: transparent;
+    text-align: left;
+  }
+
+  .dropdown > a.docs {
+    justify-content: flex-start;
+  }
+}
+
 /* ============================================== */
 @media (min-width: 1900px) {
   .container,
@@ -348,11 +424,11 @@ header .header .header__logo .header__logo-wrapper .logo {
   max-height: 111px;
   margin-top: 20px;
 }
-header .header .header__nav ul {
+header .header .header__nav > ul {
   height: 60px;
   margin-top: 21px;
 }
-header .header .header__nav ul li a {
+header .header .header__nav > ul li a {
   color: #fff;
   font-weight: bold;
   font-size: 18px;
@@ -360,29 +436,29 @@ header .header .header__nav ul li a {
 }
 
 @media (min-width: 1400px) {
-  header .header .header__nav ul li a {
+  header .header .header__nav > ul li a {
     padding: 0px 0.5rem;
   }
 }
 
 @media screen and (min-width: 850px) and (max-width: 1900px) {
-  header .header .header__nav ul {
+  header .header .header__nav > ul {
     height: 60px;
     margin-top: 16px;
   }
 }
 
 @media (max-width: 1400px) {
-  header .header .header__nav ul {
+  header .header .header__nav > ul {
     height: 40px;
   }
-  header .header .header__nav ul li a {
+  header .header .header__nav > ul li a {
     padding: 0px 0.2rem;
   }
 }
 
 @media (max-width: 1200px) {
-  header .header .header__nav ul li a {
+  header .header .header__nav > ul li a {
     font-size: 15px;
   }
 }
