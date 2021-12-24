@@ -632,12 +632,18 @@ main .section-board {
   max-height: 100%;
   object-fit: cover;
 }
-
-main .section-board .section-background {
+main
+  .section-intro-game
+  .intro-game
+  .intro-game-board
+  .intro-game-content
+  main
+  .section-board
+  .section-background {
   z-index: -10;
 }
 main .section-board .section-background .section-background-cover:before {
-  background-image: url("../images/back-1.png");
+  /* background-image: url("../images/back-1.png"); */
   background-position: center bottom;
 }
 main .section-board .dark-flash {
@@ -763,7 +769,7 @@ main .section-intro-game .intro-game .intro-game-board .tiny-dragon {
   right: -160px;
   top: 0;
   transform: translate(50%, 20%);
-  width: 25%;
+  width: 20%;
   z-index: 5;
   /* margin-right: -150px; */
 }
@@ -813,7 +819,7 @@ main .section-intro-game .intro-game .intro-game-board .intro-game-content {
 @media screen and (min-width: 1200px) and (max-width: 1900px) {
   main .section-intro-game .intro-game .intro-game-board .intro-game-content {
     /* padding: 60px 100px; */
-    padding: 30px 30px 15px 30px;
+    padding: 40px 30px 20px 30px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -822,7 +828,7 @@ main .section-intro-game .intro-game .intro-game-board .intro-game-content {
 @media screen and (min-width: 1900px) {
   main .section-intro-game .intro-game .intro-game-board .intro-game-content {
     /* padding: 100px 140px; */
-    padding: 40px 34px 23px 36px;
+    padding: 54px 37px 26px 36px;
     font-size: 24px;
     line-height: 32px;
     font-weight: 500;
@@ -1702,7 +1708,7 @@ main .section-team .section-background .section-background-cover:before {
 }
 main .section-team .section-content {
   padding: 300px 0;
-  background-image: url(../images/background-dragon.png);
+  /* background-image: url(../images/background-dragon.png); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
