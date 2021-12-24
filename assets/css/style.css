@@ -290,30 +290,36 @@ img {
 .section
   .section-background
   .section-background-cover.section-dragon-background-cover:before {
-  background-size: 111%;
-}
-
-@media screen and (max-width: 850px) {
-  /* .section
-    .section-background
-    .section-background-cover.section-dragon-background-cover:before {
-    background-size: cover;
-    background-position: 70%;
-  } */
-  .be-dragon {
-    margin-top: 50%;
-  }
+  background-size: cover;
 }
 
 @media screen and (max-width: 1200px) {
   .section
     .section-background
     .section-background-cover.section-dragon-background-cover:before {
-    background-size: cover;
-    background-position: 70%;
+    background-size: 145%;
+    /* background-position: 70%; */
   }
   .be-dragon {
     margin-top: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section
+    .section-background
+    .section-background-cover.section-dragon-background-cover:before {
+    background-size: cover;
+    background-position: 85% 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section
+    .section-background
+    .section-background-cover.section-dragon-background-cover:before {
+    background-size: cover;
+    background-position: 75% 100%;
   }
 }
 
@@ -352,6 +358,7 @@ img {
   text-align: center;
   /* text */
   color: #973504;
+  z-index: 2;
 }
 
 /* ============================================== */
@@ -427,7 +434,7 @@ header .header .header__logo .header__logo-wrapper .logo {
 }
 header .header .header__nav > ul {
   height: 60px;
-  margin-top: 21px;
+  margin-top: 15px;
 }
 header .header .header__nav > ul li a {
   color: #fff;
@@ -611,11 +618,19 @@ main .cloud.cloud-3:before {
 main .section-board {
   padding: 0;
 }
+
+@media screen and (max-width: 768px) {
+  main .section-board {
+    padding: 30px 0 0 0;
+  }
+}
+
 #background-video {
   width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 100vh;
   max-height: 100%;
+  object-fit: cover;
 }
 
 main .section-board .section-background {
@@ -700,7 +715,7 @@ main .section-board .dragon-board .dragon-light {
   }
 }
 main .section-intro-game {
-  margin-top: -140px;
+  margin-top: -130px;
 }
 
 main .dragon-head {
@@ -848,7 +863,7 @@ main .section-flags .section-background .section-background-cover:before {
   }
 }
 main .section-dragon-slider {
-  margin-top: -90px;
+  margin-top: -106px;
 }
 main .section-dragon-slider .section-background {
   z-index: -10;
@@ -861,13 +876,20 @@ main
   background-position: center top;
 }
 main .section-dragon-slider .section-content {
-  padding: 300px 0 0;
+  padding: 300px 0 150px;
 }
 @media screen and (min-width: 850px) and (max-width: 1900px) {
   main .section-dragon-slider .section-content {
     padding: 150px 0 120px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  main .section-dragon-slider .section-content {
+    padding: 112px 0 357px;
+  }
+}
+
 main .section-dragon-slider .dragon-slider {
   margin-bottom: 100px;
 }
@@ -1039,6 +1061,23 @@ main .section-dragon-slider .dragon-detail-board .dragon-detail-content:before {
     font-weight: 400;
   }
 }
+#vidDragon {
+  width: 480px;
+  max-width: 100%;
+  height: 320px;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #vidDragon {
+    width: 100%;
+  }
+}
+
 main .section-dragon-slider .dragon-base {
   position: relative;
 }
@@ -1804,8 +1843,9 @@ footer #absolute_footer .copyright {
 
 @media screen and (max-width: 768px) {
   .banner-content {
-    width: 80%;
+    width: 100%;
     left: 0;
+    top: 0;
   }
 }
 

@@ -347,9 +347,9 @@
             </div>
             <div class="col-12 col-xxl-10">
               <div class="owl-carousel owl-theme">
-                <div class="item">
+                <!-- <div class="item">
                   <div class="dragon-item type-1">
-                    <img src="assets/images/dragon-item-1.png" alt="" />
+                    <img src="assets/images/dragon-item-1.png" vid="" alt="" />
                   </div>
                 </div>
                 <div class="item">
@@ -361,35 +361,35 @@
                   <div class="dragon-item type-1">
                     <img src="assets/images/dragon-item-31.png" alt="" />
                   </div>
+                </div> -->
+                <div class="item">
+                  <div class="dragon-item type-3">
+                    <img src="assets/images/dragon-item-41.png" vid="earth" x="35px" alt="" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="dragon-item type-1">
+                    <img src="assets/images/dragon-item-51.png" vid="fire" x="70px" alt="" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="dragon-item type-2">
+                    <img src="assets/images/dragon-item-61.png" vid="water" alt="" />
+                  </div>
                 </div>
                 <div class="item">
                   <div class="dragon-item type-3">
-                    <img src="assets/images/dragon-item-41.png" alt="" />
+                    <img src="assets/images/dragon-item-71.png" vid="wood" alt="" />
                   </div>
                 </div>
                 <div class="item">
                   <div class="dragon-item type-1">
-                    <img src="assets/images/dragon-item-51.png" alt="" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="dragon-item type-1">
-                    <img src="assets/images/dragon-item-61.png" alt="" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="dragon-item type-1">
-                    <img src="assets/images/dragon-item-71.png" alt="" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="dragon-item type-1">
-                    <img src="assets/images/dragon-item-81.png" alt="" />
+                    <img src="assets/images/dragon-item-81.png" vid="gold" alt="" />
                   </div>
                 </div>
               </div>
 
-              <div class="row align-items-start justify-content-center be-dragon">
+              <div class="row align-items-start justify-content-center">
                 <div class="
                       col-12 col-lg-6 col-xxl-5
                       text-center
@@ -411,6 +411,7 @@
                             w-100
                           ">
                         <span class="type">
+
                           <img src="assets/images/dragon-type-damage.png" alt="" />
                         </span>
                         <div class="name mx-1">
@@ -438,13 +439,18 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-lg-6 col-xxl-5 text-center">
+                <div class="col-12 col-lg-6 col-xxl-5 text-center position-relative">
                   <div class="dragon-base">
-                    <div class="dragon-image">
-                      <img src="assets/images/dragon.png" alt="" id="dragon-image" />
+                    <div id="dragon-image-wrap">
+                      <video id="vidDragon" class="earth" autoplay muted playsinline loop>
+                        <source id="vidMov" src="assets/video/EARTH.mov" type='video/mp4; codecs="hvc1"'>
+                        <source id="vidWebm" src="assets/video/EARTH.webm" type="video/webm">
+                      </video>
+                      <!-- <img src="assets/video/EARTH-unscreen.gif" alt="" id="dragon-image" /> -->
+                      <!-- <img src="assets/images/dragon.png" alt="" id="dragon-image" /> -->
                     </div>
-                    <img class="base-light" src="assets/images/base-light.png" alt="" />
-                    <img class="base" src="assets/images/base.png" alt="" />
+                    <!-- <img class="base-light" src="assets/images/base-light.png" alt="" />
+                    <img class="base" src="assets/images/base.png" alt="" /> -->
                   </div>
                   <div class="dragon-detail-board-popup d-lg-none mt-5">
                     <span class="btn-custom" data-toggle="modal"
@@ -511,10 +517,11 @@
             </div>
           </div>
 
-          <div class="section-background">
-            <div class="section-background-cover section-dragon-background-cover"></div>
-          </div>
+
         </div>
+      </div>
+      <div class="section-background">
+        <div class="section-background-cover section-dragon-background-cover"></div>
       </div>
     </div>
     <div class="cloud cloud-2"></div>
@@ -932,9 +939,13 @@
       new Parallax(document.getElementById("dragon-left"));
 
       $(".dragon-item").on("click", function () {
-        const url = $(this).children("img").attr("src");
-        console.log(url);
-        $("#dragon-image").attr("src", url);
+        const vid = $(this).children("img").attr("vid");
+        const video = document.getElementById("vidDragon");
+        $('#dragon-image-wrap').attr('class', vid);
+        video.pause();
+        $("#vidMov").attr("src", `assets/video/${vid}.mov`);
+        $("#vidWebm").attr("src", `assets/video/${vid}.webm`);
+        video.load();
       });
 
       document.addEventListener("mousemove", parallax);
