@@ -209,7 +209,7 @@
   <main>
     <div class="section section-board">
       <div class="section-content position-relative">
-        <video id="background-video" autoplay muted loop>
+        <video id="background-video" autoplay muted loop playsinline>
           <source id="mp4-video" src="https://s3.ap-southeast-1.amazonaws.com/dragonet.games/dragonet-lg.mp4"
             type="video/mp4" />
 
@@ -350,51 +350,60 @@
             </div>
             <div class="col-12 col-xxl-10">
               <div class="owl-carousel owl-theme">
-                <!-- <div class="item">
-                  <div class="dragon-item type-1">
-                    <img src="assets/images/dragon-item-1.png" vid="" alt="" />
+                <div class="item">
+                  <div class="dragon-item gold active">
+                    <div class="bg">
+                      <img src="assets/images/dragon/dragon-gold.svg" vid="gold" alt="" />
+                    </div>
                   </div>
                 </div>
-                <div class="item">
-                  <div class="dragon-item type-2">
-                    <img src="assets/images/dragon-item-21.png" alt="" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="dragon-item type-1">
-                    <img src="assets/images/dragon-item-31.png" alt="" />
-                  </div>
-                </div> -->
-                <div class="item">
-                  <div class="dragon-item type-3">
-                    <img src="assets/images/dragon-item-41.png" vid="earth" x="35px" alt="" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="dragon-item type-1">
-                    <img src="assets/images/dragon-item-51.png" vid="fire" x="70px" alt="" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="dragon-item type-2">
-                    <img src="assets/images/dragon-item-61.png" vid="water" alt="" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="dragon-item type-3">
-                    <img src="assets/images/dragon-item-71.png" vid="wood" alt="" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="dragon-item type-1">
-                    <img src="assets/images/dragon-item-81.png" vid="gold" alt="" />
-                  </div>
-                </div>
-              </div>
 
-              <div class="row align-items-start justify-content-center">
+                <div class="item">
+                  <div class="dragon-item earth">
+                    <div class="bg">
+                      <img src="assets/images/dragon/dragon-earth.svg" vid="earth" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="dragon-item dark">
+                    <div class="bg">
+                      <img src="assets/images/dragon/dragon-dark.svg" vid="dark" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="dragon-item fire">
+                    <div class="bg">
+                      <img src="assets/images/dragon/dragon-fire.svg" vid="fire" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="dragon-item wood">
+                    <div class="bg">
+                      <img src="assets/images/dragon/dragon-wood.svg" vid="wood" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="dragon-item water">
+                    <div class="bg">
+                      <img src="assets/images/dragon/dragon-water.svg" vid="water" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-xxl-10">
+              <div class="row justify-content-between">
                 <div class="
-                      col-12 col-lg-6 col-xxl-5
+                      col-12 col-lg-5
                       text-center
                       position-relative
                       d-none d-lg-block
@@ -414,7 +423,6 @@
                             w-100
                           ">
                         <span class="type">
-
                           <img src="assets/images/dragon-type-damage.png" alt="" />
                         </span>
                         <div class="name mx-1">
@@ -435,23 +443,32 @@
                         </span>
                       </div>
                     </div>
-                    <div class="dragon-detail-content d-flex align-items-center">
-                      <span>Shuri is an Archer. It is a melee character that user
+                    <div class="dragon-detail-content d-flex flex-column gap-4">
+                      <span class="text-start d-flex">Shuri is an Archer. It is a melee character that user
                         a sword and a shield freely, and it is easy to
                         operate</span>
+                      <div class="d-flex gap-4">
+                        <div>
+                          <img src="assets/images/skill/skill-1.svg" alt="skill" />
+                        </div>
+                        <div class="skill-name d-flex align-items-center justify-content-center">
+                          Aftershock Fire
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-lg-6 col-xxl-5 text-center position-relative">
+                <div
+                  class="col-12 col-lg-6 col-xxl-5 text-center position-relative d-flex justify-content-center align-items-center flex-column">
                   <div class="dragon-base">
-                    <div id="dragon-image-wrap">
-                      <video id="vidDragon" class="earth" autoplay muted playsinline loop>
-                        <source id="vidMov" src="assets/video/EARTH.mov" type='video/mp4; codecs="hvc1"'>
-                        <source id="vidWebm" src="assets/video/EARTH.webm" type="video/webm">
-                      </video>
-                      <!-- <img src="assets/video/EARTH-unscreen.gif" alt="" id="dragon-image" /> -->
-                      <!-- <img src="assets/images/dragon.png" alt="" id="dragon-image" /> -->
-                    </div>
+                    <!-- <div id="dragon-image-wrap"> -->
+                    <video id="vidDragon" class="gold" autoplay loop muted playsinline>
+                      <source id="vidMov" src="assets/video/gold.mov" type='video/mp4; codecs="hvc1"'>
+                      <source id="vidWebm" src="assets/video/gold.webm" type="video/webm">
+                    </video>
+                    <!-- <img src="assets/video/EARTH-unscreen.gif" alt="" id="dragon-image" /> -->
+                    <!-- <img src="assets/images/dragon.png" alt="" id="dragon-image" /> -->
+                    <!-- </div> -->
                     <!-- <img class="base-light" src="assets/images/base-light.png" alt="" />
                     <img class="base" src="assets/images/base.png" alt="" /> -->
                   </div>
@@ -460,60 +477,7 @@
                       data-target="#dragon_detail_board_popup">Infomation</span>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="dragon_detail_board_popup" tabindex="-1" role="dialog"
-                      aria-labelledby="modelTitleId" aria-hidden="true">
-                      <div class="
-                            modal-dialog
-                            modal-dialog-centered
-                            modal-dialog-scrollable
-                          " role="document">
-                        <div class="modal-content" style="background-color: transparent">
-                          <div class="modal-body p-0">
-                            <div class="dragon-detail-board">
-                              <div class="
-                                    dragon-detail-header
-                                    d-flex
-                                    align-items-center
-                                    justify-content-between
-                                  ">
-                                <div class="
-                                      dragon-detail-header-wrapper
-                                      d-flex
-                                      align-items-center
-                                      justify-content-between
-                                      w-100
-                                    ">
-                                  <span class="type"><img src="assets/images/dragon-type-damage.png" alt="" /></span>
-                                  <div class="name mx-1">
-                                    Shuri<br />
-                                    <div class="
-                                          star-rank
-                                          d-flex
-                                          align-items-center
-                                          justify-content-center
-                                        ">
-                                      <img src="assets/images/star.svg" alt="" />
-                                      <img src="assets/images/star.svg" alt="" />
-                                      <img src="assets/images/star.svg" alt="" />
-                                    </div>
-                                  </div>
-                                  <span class="type"><img src="assets/images/dragon-type-damage.png" alt="" /></span>
-                                </div>
-                              </div>
-                              <div class="
-                                    dragon-detail-content
-                                    d-flex
-                                    align-items-center
-                                  ">
-                                <span>Shuri is an Archer. It is a melee character
-                                  that user a sword and a shield freely, and
-                                  it is easy to operate</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -796,6 +760,67 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="dragon_detail_board_popup" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+      aria-hidden="true">
+      <div class="
+        modal-dialog
+        modal-dialog-centered
+        modal-dialog-scrollable
+      " role="document">
+        <div class="modal-content" style="background-color: transparent; height: 350px;">
+          <div class="modal-body p-0">
+            <div class="dragon-detail-board">
+              <div class="
+                dragon-detail-header
+                d-flex
+                align-items-center
+                justify-content-between
+              ">
+                <div class="
+                  dragon-detail-header-wrapper
+                  d-flex
+                  align-items-center
+                  justify-content-between
+                  w-100
+                ">
+                  <span class="type"><img src="assets/images/dragon-type-damage.png" alt="" /></span>
+                  <div class="name mx-1">
+                    Shuri<br />
+                    <div class="
+                      star-rank
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                    ">
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                    </div>
+                  </div>
+                  <span class="type"><img src="assets/images/dragon-type-damage.png" alt="" /></span>
+                </div>
+              </div>
+              <div class="
+                dragon-detail-content
+                d-flex flex-column gap-4
+              ">
+                <span class="text-start d-flex">Shuri is an Archer. It is a melee character that user
+                  a sword and a shield freely, and it is easy to
+                  operate</span>
+                <div class="d-flex gap-4">
+                  <div>
+                    <img src="assets/images/skill/skill-1.svg" alt="skill" />
+                  </div>
+                  <div class="skill-name d-flex align-items-center justify-content-center">
+                    Aftershock Fire
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -914,6 +939,8 @@
         </div>
       </div>
     </div>
+
+
   </footer>
 
   <script src="assets/dist/jquery/jquery-3.6.0.min.js"></script>
@@ -942,10 +969,12 @@
       new Parallax(document.getElementById("dragon-right"));
       new Parallax(document.getElementById("dragon-left"));
 
-      $(".dragon-item").on("click", function () {
-        const vid = $(this).children("img").attr("vid");
+      $('body').on('click', ".dragon-item", function () {
+        const vid = $(this).children('.bg').children("img").attr("vid");
         const video = document.getElementById("vidDragon");
+        $('.dragon-item').removeClass('active');
         $('#dragon-image-wrap').attr('class', vid);
+        $(this).addClass('active');
         video.pause();
         $("#vidMov").attr("src", `assets/video/${vid}.mov`);
         $("#vidWebm").attr("src", `assets/video/${vid}.webm`);

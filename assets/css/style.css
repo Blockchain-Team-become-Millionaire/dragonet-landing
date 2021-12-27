@@ -237,7 +237,7 @@ img {
   position: relative;
   overflow: hidden;
   padding: 30px 0 0 0;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 .section .section-content {
   display: block;
@@ -897,7 +897,7 @@ main .section-dragon-slider .section-content {
 }
 
 main .section-dragon-slider .dragon-slider {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 main .section-dragon-slider .dragon-slider .owl-carousel .owl-item {
   margin: 15px 0;
@@ -911,22 +911,121 @@ main .section-dragon-slider .dragon-slider .owl-carousel .owl-item {
   height: 270px;
 }
 main .section-dragon-slider .dragon-slider .dragon-item {
-  padding: 15px;
+  width: 168px;
+  height: 146px;
+  position: relative;
+  cursor: pointer;
+  padding: 4px;
 }
 
-main .section-dragon-slider .dragon-slider .dragon-item::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
+@media screen and (max-width: 1024px) {
+  main .section-dragon-slider .dragon-slider .dragon-item {
+    transform: scale(0.85);
+  }
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item img {
   position: absolute;
-  border-radius: 50%;
+  width: 160px;
+  height: 138px;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  transition: transform 0.5s ease-in-out;
 }
+
+main .section-dragon-slider .dragon-slider .dragon-item:hover img {
+  transform: scale(1.1);
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item .bg {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 138px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item,
+main .section-dragon-slider .dragon-slider .dragon-item .bg {
+  clip-path: polygon(
+    0% 0%,
+    90% 0%,
+    88% 0%,
+    91% 4%,
+    92% 5%,
+    93% 6%,
+    95% 8%,
+    100% 12%,
+    100% 100%,
+    9% 100%,
+    7% 96%,
+    4% 92%,
+    3% 91%,
+    0% 88%
+  );
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item.gold {
+  background: #7c2a4b;
+  box-shadow: inset 0px 0px 10px #000000;
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item.gold .bg {
+  /* background: radial-gradient(50% 50% at 50% 50%, #b7567d 0%, #7c2a4b 100%); */
+  background: radial-gradient(circle, #b7567d 0%, #7c2a4b 100%);
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item.earth {
+  background: #fff9c9;
+  box-shadow: inset 0px 0px 10px #000000;
+}
+main .section-dragon-slider .dragon-slider .dragon-item.earth .bg {
+  background: radial-gradient(circle, #efbc80 0%, #c88333 100%);
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item.dark {
+  background: #a94fff;
+  box-shadow: inset 0px 0px 10px #000000;
+}
+main .section-dragon-slider .dragon-slider .dragon-item.dark .bg {
+  background: radial-gradient(circle, #83c5c4 0%, #2d6b6b 100%);
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item.fire {
+  background: #a13d3d;
+  box-shadow: inset 0px 0px 10px #000000;
+}
+main .section-dragon-slider .dragon-slider .dragon-item.fire .bg {
+  background: radial-gradient(circle, #83c5c4 0%, #2d6b6b 100%);
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item.wood {
+  background: #7c2a4b;
+  box-shadow: inset 0px 0px 10px #000000;
+}
+main .section-dragon-slider .dragon-slider .dragon-item.wood .bg {
+  background: radial-gradient(circle, #cd9b72 0%, #82532d 100%);
+}
+main .section-dragon-slider .dragon-slider .dragon-item.water {
+  background: #4953b2;
+  box-shadow: inset 0px 0px 10px #000000;
+}
+main .section-dragon-slider .dragon-slider .dragon-item.water .bg {
+  background: radial-gradient(circle, #a394a8 0%, #504554 100%);
+}
+
+main .section-dragon-slider .dragon-slider .dragon-item.active {
+  box-shadow: inset 0px 0px 10px #ffb400;
+}
+
 main .section-dragon-slider .dragon-slider .dragon-item.type-1 {
-  background: radial-gradient(50% 50% at 50% 50%, #83c5c4 0%, #2d6b6b 92.51%);
-  border: 4px solid #a94fff;
+  /* background: #7c2a4b; */
+  /* border: 4px solid #7c2a4b; */
   box-shadow: inset 0px 0px 10px #000000;
 }
 main .section-dragon-slider .dragon-slider .dragon-item.type-1:hover {
@@ -948,10 +1047,15 @@ main .section-dragon-slider .dragon-slider .dragon-item.type-3 {
 main .section-dragon-slider .dragon-slider .dragon-item.type-3:hover {
   box-shadow: 0px 0px 15px #f66869, inset 0px 0px 9px #000000;
 }
-main .section-dragon-slider .dragon-detail-board {
+main .dragon-detail-board {
   position: relative;
 }
-main .section-dragon-slider .dragon-detail-board .dragon-detail-header {
+
+main .dragon-detail-board-popup {
+  z-index: 99;
+}
+
+main .dragon-detail-board .dragon-detail-header {
   position: absolute;
   top: -29px;
   left: 50%;
@@ -960,7 +1064,7 @@ main .section-dragon-slider .dragon-detail-board .dragon-detail-header {
   margin: 0 auto;
   padding: 5px 35px 30px;
 }
-main .section-dragon-slider .dragon-detail-board .dragon-detail-header:before {
+main .dragon-detail-board .dragon-detail-header:before {
   content: "";
   position: absolute;
   top: 0;
@@ -976,7 +1080,6 @@ main .section-dragon-slider .dragon-detail-board .dragon-detail-header:before {
   z-index: -1;
 }
 main
-  .section-dragon-slider
   .dragon-detail-board
   .dragon-detail-header
   .dragon-detail-header-wrapper
@@ -984,7 +1087,6 @@ main
   min-width: 34px;
 }
 main
-  .section-dragon-slider
   .dragon-detail-board
   .dragon-detail-header
   .dragon-detail-header-wrapper
@@ -1000,7 +1102,6 @@ main
   color: #fbfd9f;
 }
 main
-  .section-dragon-slider
   .dragon-detail-board
   .dragon-detail-header
   .dragon-detail-header-wrapper
@@ -1011,7 +1112,6 @@ main
   margin-top: 5px;
 }
 main
-  .section-dragon-slider
   .dragon-detail-board
   .dragon-detail-header
   .dragon-detail-header-wrapper
@@ -1022,7 +1122,6 @@ main
   margin: 0 2px;
 }
 main
-  .section-dragon-slider
   .dragon-detail-board
   .dragon-detail-header
   .dragon-detail-header-wrapper
@@ -1031,20 +1130,39 @@ main
   img:not(:first-child):not(:last-child) {
   width: 17px;
 }
-main .section-dragon-slider .dragon-detail-board .dragon-detail-content {
-  padding: 120px 60px 60px;
+
+main .dragon-detail-board .dragon-detail-content {
+  padding: 96px 130px 60px;
   margin-top: 30px;
   color: #f1fff8;
   font-family: Montserrat, sans-serif;
 }
-main .section-dragon-slider .dragon-detail-board .dragon-detail-content:before {
+
+@media screen and (max-width: 1024px) {
+  main .dragon-detail-board .dragon-detail-content {
+    padding: 80px 60px 60px;
+  }
+}
+
+main .dragon-detail-board .dragon-detail-content span {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+}
+
+main .dragon-detail-board .dragon-detail-content .skill-name {
+  font-size: 16px;
+  line-height: 23px;
+  color: #fbfd9f;
+}
+main .dragon-detail-board .dragon-detail-content:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../images/dragon-detail.png);
+  background-image: url(../images/dragon-detail.svg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
@@ -1053,26 +1171,33 @@ main .section-dragon-slider .dragon-detail-board .dragon-detail-content:before {
   z-index: -1;
 }
 @media screen and (max-width: 850px) {
-  main .section-dragon-slider .dragon-detail-board .dragon-detail-content {
-    padding: 80px 30px 30px;
+  main .dragon-detail-board .dragon-detail-content {
+    padding: 80px 110px 30px;
     font-size: 12px;
     line-height: 16px;
     font-weight: 400;
   }
 }
 @media screen and (min-width: 850px) {
-  main .section-dragon-slider .dragon-detail-board .dragon-detail-content {
+  main .dragon-detail-board .dragon-detail-content {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
   }
 }
+
+@media screen and (max-width: 640px) {
+  main .dragon-detail-board .dragon-detail-content {
+    padding: 81px 79px 30px;
+  }
+}
+
 #vidDragon {
-  width: 480px;
+  /* width: 480px; */
   max-width: 100%;
-  height: 320px;
+  /* height: 320px; */
   position: absolute;
-  top: 75px;
+  top: 0;
   right: 0;
   left: 0;
   object-fit: cover;
@@ -1081,11 +1206,15 @@ main .section-dragon-slider .dragon-detail-board .dragon-detail-content:before {
 @media screen and (max-width: 768px) {
   #vidDragon {
     width: 100%;
+    position: relative;
   }
 }
 
 main .section-dragon-slider .dragon-base {
   position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
 }
 main .section-dragon-slider .dragon-base .dragon-image {
   position: absolute;
