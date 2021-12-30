@@ -463,8 +463,10 @@
                   <div class="dragon-base">
                     <!-- <div id="dragon-image-wrap"> -->
                     <video id="vidDragon" class="gold" autoplay loop muted playsinline>
-                      <source id="vidMov" src="assets/video/gold.mov" type='video/mp4; codecs="hvc1"'>
-                      <source id="vidWebm" src="assets/video/gold.webm" type="video/webm">
+                      <source id="vidMov" src="https://s3.ap-southeast-1.amazonaws.com/dragonet.games/dragon/gold.mov"
+                        type='video/mp4; codecs="hvc1"'>
+                      <source id="vidWebm" src="https://s3.ap-southeast-1.amazonaws.com/dragonet.games/dragon/gold.webm"
+                        type="video/webm">
                     </video>
                     <!-- <img src="assets/video/EARTH-unscreen.gif" alt="" id="dragon-image" /> -->
                     <!-- <img src="assets/images/dragon.png" alt="" id="dragon-image" /> -->
@@ -976,8 +978,8 @@
         $('#dragon-image-wrap').attr('class', vid);
         $(this).addClass('active');
         video.pause();
-        $("#vidMov").attr("src", `assets/video/${vid}.mov`);
-        $("#vidWebm").attr("src", `assets/video/${vid}.webm`);
+        $("#vidMov").attr("src", `https://s3.ap-southeast-1.amazonaws.com/dragonet.games/dragon/${vid}.mov`);
+        $("#vidWebm").attr("src", `https://s3.ap-southeast-1.amazonaws.com/dragonet.games/dragon/${vid}.webm`);
         video.load();
       });
 
