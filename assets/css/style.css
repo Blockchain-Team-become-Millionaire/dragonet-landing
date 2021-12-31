@@ -106,7 +106,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .app-button {
-    height: 64px;
+    height: 52px;
   }
 }
 
@@ -389,7 +389,17 @@ header .header {
 }
 header .header:before {
   content: "";
-  background-image: url(../images/header-bg.png);
+  background-image: url(../img/header-bg.png);
+  background-image: -webkit-image-set(
+    "../img/header-bg.avif" type("image/avif"),
+    "../img/header-bg.webp" type("image/webp"),
+    "../img/header-bg.png" type("image/png")
+  );
+  background-image: image-set(
+    "../img/header-bg.avif" type("image/avif"),
+    "../img/header-bg.webp" type("image/webp"),
+    "../img/header-bg.png" type("image/png")
+  );
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% auto;
@@ -738,7 +748,17 @@ main .section-intro-game .section-background {
   z-index: 1;
 }
 main .section-intro-game .section-background .section-background-cover:before {
-  background-image: url("../images/back-2.png");
+  background-image: url("../images/back-2.webp");
+  background-image: -webkit-image-set(
+    "../img/back-2.avif" type("image/avif"),
+    "../img/back-2.webp" type("image/webp"),
+    "../img/back-2.png" type("image/png")
+  );
+  background-image: image-set(
+    "../img/back-2.avif" type("image/avif"),
+    "../img/back-2.webp" type("image/webp"),
+    "../img/back-2.png" type("image/png")
+  );
   background-position: center top;
 }
 main .section-intro-game .intro-game {
@@ -841,7 +861,17 @@ main .section-flags .section-background {
   z-index: -10;
 }
 main .section-flags .section-background .section-background-cover:before {
-  background-image: url("../images/back-3.png");
+  background-image: url("../img/back-3.webp");
+  background-image: -webkit-image-set(
+    "../img/back-3.avif" type("image/avif"),
+    "../img/back-3.webp" type("image/webp"),
+    "../img/back-3.png" type("image/png")
+  );
+  background-image: image-set(
+    "../img/back-3.avif" type("image/avif"),
+    "../img/back-3.webp" type("image/webp"),
+    "../img/back-3.png" type("image/png")
+  );
   background-position: center top;
 }
 @media screen and (max-width: 850px) {
@@ -878,7 +908,17 @@ main
   .section-dragon-slider
   .section-background
   .section-background-cover:before {
-  background-image: url("../images/back-4.png");
+  background-image: url("../img/back-4.webp");
+  background-image: -webkit-image-set(
+    "../img/back-4.avif" type("image/avif"),
+    "../img/back-4.webp" type("image/webp"),
+    "../img/back-4.png" type("image/png")
+  );
+  background-image: image-set(
+    "../img/back-4.avif" type("image/avif"),
+    "../img/back-4.webp" type("image/webp"),
+    "../img/back-4.png" type("image/png")
+  );
   background-position: center top;
 }
 main .section-dragon-slider .section-content {
@@ -1268,7 +1308,17 @@ main .section-features .section-background {
   z-index: -10;
 }
 main .section-features .section-background .section-background-cover:before {
-  background-image: url("../images/back-5.png");
+  background-image: url("../img/back-5.webp");
+  background-image: -webkit-image-set(
+    "../img/back-5.avif" type("image/avif"),
+    "../img/back-5.webp" type("image/webp"),
+    "../img/back-5.png" type("image/png")
+  );
+  background-image: image-set(
+    "../img/back-5.avif" type("image/avif"),
+    "../img/back-5.webp" type("image/webp"),
+    "../img/back-5.png" type("image/png")
+  );
   background-position: center top;
 }
 main .section-features .section-content {
@@ -1495,7 +1545,17 @@ main .section-roadmap .section-background {
   z-index: -10;
 }
 main .section-roadmap .section-background .section-background-cover:before {
-  background-image: url("../images/back-6.png");
+  background-image: url("../img/back-6.webp");
+  background-image: -webkit-image-set(
+    "../img/back-6.avif" type("image/avif"),
+    "../img/back-6.webp" type("image/webp"),
+    "../img/back-6.png" type("image/png")
+  );
+  background-image: image-set(
+    "../img/back-6.avif" type("image/avif"),
+    "../img/back-6.webp" type("image/webp"),
+    "../img/back-6.png" type("image/png")
+  );
   background-position: center top;
 }
 main .section-roadmap .section-content {
@@ -1861,7 +1921,17 @@ main .section-team .section-background {
   z-index: -10;
 }
 main .section-team .section-background .section-background-cover:before {
-  background-image: url("../images/back-7.png");
+  background-image: url("../img/back-7.webp");
+  background-image: -webkit-image-set(
+    "../img/back-7.avif" type("image/avif"),
+    "../img/back-7.webp" type("image/webp"),
+    "../img/back-7.png" type("image/png")
+  );
+  background-image: image-set(
+    "../img/back-7.avif" type("image/avif"),
+    "../img/back-7.webp" type("image/webp"),
+    "../img/back-7.png" type("image/png")
+  );
   background-position: center top;
 }
 main .section-team .section-content {
@@ -1903,7 +1973,17 @@ main .section-partner .section-background {
   z-index: -10;
 }
 main .section-partner .section-background .section-background-cover:before {
-  background-image: url("../images/back-8.png");
+  background-image: url("../img/back-8.webp");
+  background-image: -webkit-image-set(
+    "../img/back-8.avif" type("image/avif"),
+    "../img/back-8.webp" type("image/webp"),
+    "../img/back-8.png" type("image/png")
+  );
+  background-image: image-set(
+    "../img/back-8.avif" type("image/avif"),
+    "../img/back-8.webp" type("image/webp"),
+    "../img/back-8.png" type("image/png")
+  );
   background-position: center top;
 }
 main .section-partner .section-content {
