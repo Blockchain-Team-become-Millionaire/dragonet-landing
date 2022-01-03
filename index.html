@@ -140,7 +140,12 @@
         <div class="header__logo col-5">
           <div class="header__logo-wrapper">
             <a href="/">
-              <img class="logo" src="assets/images/logo.png" alt="dragonet-logo" />
+              <!-- <img class="logo" src="assets/images/logo.png" alt="dragonet-logo" /> -->
+              <picture>
+                <source srcset="assets/img/logo.avif" type="image/avif">
+                <source srcset="assets/img/logo.webp" type="image/webp">
+                <img class="logo" src="assets/img/logo.png" alt="dragonet-logo">
+              </picture>
             </a>
           </div>
         </div>
@@ -428,13 +433,18 @@
                     </div>
                   </div>
                 </div>
-                <!-- <div class="item">
+                <div class="item">
                   <div class="dragon-item dark">
                     <div class="bg">
-                      <img src="assets/images/dragon/dragon-dark.png" vid="dark" alt="" />
+
+                      <picture vid="dark">
+                        <source srcset="assets/img/dragon/dragon-dark.avif" type="image/avif">
+                        <source srcset="assets/img/dragon/dragon-dark.webp" type="image/webp">
+                        <img src="assets/images/dragon/dragon-dark.png" alt="" />
+                      </picture>
                     </div>
                   </div>
-                </div> -->
+                </div>
                 <div class="item">
                   <div class="dragon-item fire">
                     <div class="bg">
