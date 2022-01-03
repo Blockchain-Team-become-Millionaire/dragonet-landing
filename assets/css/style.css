@@ -1245,10 +1245,11 @@ main .dragon-detail-board .dragon-detail-content:before {
   transform: translateX(-10%);
 }
 
+#wrap-dragon-base {
+  height: 400px;
+}
+
 @media screen and (max-width: 1024px) {
-  #wrap-dragon-base {
-    height: 400px;
-  }
   #vidDragon {
     bottom: 0;
     transform: translateX(10%) scale(0.9);
